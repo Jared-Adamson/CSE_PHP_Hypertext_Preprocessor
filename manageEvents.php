@@ -1,3 +1,8 @@
+<!--
+//Jared Adamson
+//CPI310
+-->
+
 <?php
 class manageEvents
 {
