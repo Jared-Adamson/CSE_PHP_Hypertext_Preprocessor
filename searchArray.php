@@ -1,3 +1,8 @@
+<!--
+//Jared Adamson
+//CPI310
+-->
+
 <?php
 $city = $_POST['city'];
 $bArray = array("Tempe" => 98, "Chandler" => 99, "Phoenix"=> 100);
