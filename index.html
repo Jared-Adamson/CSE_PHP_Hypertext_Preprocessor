@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>AME494 Programming for Social and Interactive Media - Assignment 1</title>
+</head>
+<body>
+
+<center>
+<div id='outer'>
+<div id='inner'>
+
+<table>
+    <tr>
+        <td>Input Text:</td>
+        <td><input type="text" id="txt"></td>
+    </tr>
+    <tr>
+    <td>&nbsp;</td>
+    <td>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+       <input type="button" id="add" value="Add" onclick="Javascript:addText()">
+
+    </td>
+    
+    </tr>
+   
+</table>
+<br><br>
+<div id="textTable">
+
+<table id="inputTable"  border="0" cellpadding="0">
+    <tr>
+        
+        <td><u><b>User Text Inputs</b></u></td>
+        
+    </tr>
+</table>
+
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+</center>
+</body>
+</html>
+
+<script type="text/javascript">
+function addText() {
+          
+    var userInput= document.getElementById("Text");
+    
+    var table = document.getElementById("inputTable");
+ 
+    var rowCount = table.rows.length;
+    var row = table.insertRow(rowCount);
+  
+    row.insertCell(0).innerHTML= txt.value;
+    row.insertCell(1).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteText(this)">';
+}
+</script>
+
+<script type="text/javascript">
+function deleteText(obj) {
+var result = confirm("Are you sure you want to delete?");
+if (result==true) {
+      
+    var index = obj.parentNode.parentNode.rowIndex;
+    
+    var table = document.getElementById("inputTable");
+    
+    table.deleteRow(index);
+}
+    
+}
+</script>
+
+<style type="text/css">
+#inner { 
+height: 800px;
+width: 400px; 
+padding: 20px;
+background-color: white; 
+-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4); 
+-moz-box-shadow: 0px 1px 6px rgba(23, 69, 88, .5);
+-webkit-border-radius: 12px;
+-moz-border-radius: 7px; 
+border-radius: 7px;
+background: -webkit-gradient(linear, left top, left bottom, 
+color-stop(0%, white), color-stop(15%, white), color-stop(100%, #D7E9F5)); 
+background: -moz-linear-gradient(top, white 0%, white 55%, #D5E4F3 130%); 
+}
+#outer {
+    width: 700px;
+    
+    padding: 25px;
+    
+    border: 25px solid navy;
+    
+    margin: 25px;
+    
+    background-color: blue;
+}
+</style>
